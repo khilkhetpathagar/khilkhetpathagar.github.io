@@ -916,3 +916,11 @@ body {
     margin-bottom: 15px;
   }
 }
+
+.website{
+  color: black;
+}
+
+.website:hover{
+  color: white;
+}
