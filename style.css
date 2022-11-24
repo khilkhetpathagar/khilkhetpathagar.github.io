@@ -280,7 +280,7 @@ section .title::after{
 /* projects section styling */
 .projects, .teams{
   color: #fff;
-  background: #111;
+  background: #f9bf3f;
 }
 .projects .title{
   color: #fff;
@@ -892,6 +892,7 @@ body {
   content: "";
   display: table;
   clear: both;
+
 }
 
 /* Style the counter cards */
@@ -899,7 +900,12 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 18px;
   text-align: center;
+  height: fit-content;
   background-color: #f1f1f1;
+  display: flex; /*Make sure to call this on your container*/
+  align-items: stretch; /*stretches all cards same height*/
+  justify-content: space-around; /*some space between cards*/
+  margin-bottom: 25px;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
