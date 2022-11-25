@@ -917,6 +917,15 @@ body {
   }
 }
 
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 60%;
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
 .website{
   color: black;
 }
