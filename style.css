@@ -933,7 +933,3 @@ body {
 .website:hover{
   color: white;
 }
-
-body {
-  min-width: 960px;
-}
