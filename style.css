@@ -933,3 +933,8 @@ body {
 .website:hover{
   color: white;
 }
+
+
+.intro{
+  margin-bottom: 45px;
+}
