@@ -55,6 +55,7 @@
             display: flex;
             align-items: center;
             gap: 28px;
+            position: relative;
         }
 
         .nav-logo {
@@ -867,20 +868,97 @@
             display: none;
         }
 
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #063D22;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
         /* Responsive */
+        @media (max-width: 1024px) {
+            .collection-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .committee-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .nav-spacer {
+                display: none;
+            }
+
             .nav-links {
-                gap: 12px;
-                font-size: 14px;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(251, 248, 241, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 20px 28px;
+                gap: 15px;
+                border-bottom: 1px solid #E4DCC8;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
             }
 
             .hero-container {
                 grid-template-columns: 1fr;
-                padding: 60px 28px;
+                padding: 60px 20px;
             }
 
             .hero h1 {
-                font-size: 42px;
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-stats {
+                gap: 25px;
             }
 
             .about-grid,
@@ -906,7 +984,78 @@
             }
 
             .section {
-                padding: 60px 28px;
+                padding: 60px 20px;
+            }
+
+            .donate-box {
+                padding: 40px 20px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-spacer {
+                display: none;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo span {
+                font-size: 18px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-badge {
+                font-size: 13px;
+                padding: 5px 12px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .stat-label {
+                font-size: 14px;
+            }
+
+            .collection-grid,
+            .committee-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .section-desc {
+                font-size: 16px;
             }
         }
     </style>
@@ -920,8 +1069,12 @@
                 <span data-lang="bn">খিলক্ষেত পাঠাগার</span>
                 <span data-lang="en" style="display:none;">Khilkhet Pathagar</span>
             </a>
-            <div class="nav-spacer"></div>
-            <div class="nav-links">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="#about" data-lang="bn">পাঠাগার সম্পর্কে</a>
                 <a href="#about" data-lang="en" style="display:none;">About Us</a>
                 <a href="#collection" data-lang="bn">সংগ্রহ</a>
@@ -1569,6 +1722,33 @@
                 switchLanguage(this.getAttribute('data-lang-btn'));
             });
         });
+
+        // Hamburger menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a nav link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
 
         // Initial render
         renderGallery();
