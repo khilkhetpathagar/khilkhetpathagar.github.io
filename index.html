@@ -839,6 +839,34 @@
             font-size: 15px;
         }
 
+        /* Filter Buttons */
+        .year-filter {
+            border: 2px solid #E4DCC8;
+            background: #fff;
+            color: #063D22;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .year-filter:hover {
+            border-color: #007A3E;
+            color: #007A3E;
+        }
+
+        .year-filter.active {
+            background: #063D22;
+            color: #fff;
+            border-color: #063D22;
+        }
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -1095,351 +1123,748 @@
         <div style="margin-bottom: 36px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
             <span style="font-weight: 600; color: #063D22;">বছর অনুযায়ী ফিল্টার:</span>
             <button class="year-filter active" data-year="সব">সব</button>
-            <button class="year-filter" data-year="2022">২০२२</button>
-            <button class="year-filter" data-year="2021">२०२१</button>
-            <button class="year-filter" data-year="2020">२०२०</button>
-            <button class="year-filter" data-year="2019">२०१९</button>
-            <button class="year-filter" data-year="2018">२०१८</button>
-            <button class="year-filter" data-year="2017">२०१७</button>
-            <button class="year-filter" data-year="2016">२०१६</button>
-            <button class="year-filter" data-year="2014">२०१४</button>
-            <button class="year-filter" data-year="2012">२०१२</button>
-            <button class="year-filter" data-year="2011">२०११</button>
-            <button class="year-filter" data-year="2010">२०१०</button>
+            <button class="year-filter" data-year="2022">২০২২</button>
+            <button class="year-filter" data-year="2021">২০২১</button>
+            <button class="year-filter" data-year="2020">২০২০</button>
+            <button class="year-filter" data-year="2019">২০১৯</button>
+            <button class="year-filter" data-year="2018">২০১৮</button>
+            <button class="year-filter" data-year="2017">২০১৭</button>
+            <button class="year-filter" data-year="2016">২০১৬</button>
+            <button class="year-filter" data-year="2015">২০১৫</button>
+            <button class="year-filter" data-year="2014">২০১৪</button>
+            <button class="year-filter" data-year="2012">২০১২</button>
+            <button class="year-filter" data-year="2011">২০১১</button>
+            <button class="year-filter" data-year="2010">২০১০</button>
         </div>
 
         <div class="gallery-grid" id="galleryGrid">
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2022">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Birthday_2022.jpg" alt="১২ তম প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2019_22/Birthday_2022.jpg" alt="১২ তম প্রতিষ্ঠাবার্ষিকী, ২০২২">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">১২ তম প্রতিষ্ঠাবার্ষিকী</span>
+                    <span class="gallery-title">১২ তম প্রতিষ্ঠাবার্ষিকী, ২০২২</span>
                     <span class="gallery-year">২০২২</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2022">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Iftar_Mahfil_2022.jpg" alt="ইফতার মাহফিল">
+                    <img src="Gallery/2019_22/Iftar_Mahfil_2022.jpg" alt="খিলক্ষেত পাঠাগার ইফতার মাহফিল, ২০২২">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">ইফতার মাহফিল</span>
+                    <span class="gallery-title">খিলক্ষেত পাঠাগার ইফতার মাহফিল, ২০২২</span>
                     <span class="gallery-year">২০২২</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2022">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Boi_Songroho_Utsob_2022.jpg" alt="বই সংগ্রহ উৎসব">
+                    <img src="Gallery/2019_22/Boi_Songroho_Utsob_2022.jpg" alt="বই সংগ্রহ উৎসব, ২০২২">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বই সংগ্রহ উৎসব</span>
-                    <span class="gallery-year">২০২२</span>
+                    <span class="gallery-title">বই সংগ্রহ উৎসব, ২০২২</span>
+                    <span class="gallery-year">২০২২</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2022">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/GronthoGar_Dibosh_2022.jpg" alt="গ্রন্থাগার দিবস">
+                    <img src="Gallery/2019_22/GronthoGar_Dibosh_2022.jpg" alt="জাতীয় গ্রন্থাগার দিবস উদযাপনে আলোচনা সভা (অনলাইন), ২০২২">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">জাতীয় গ্রন্থাগার দিবস</span>
-                    <span class="gallery-year">২০२२</span>
+                    <span class="gallery-title">জাতীয় গ্রন্থাগার দিবস উদযাপনে আলোচনা সভা (অনলাইন), ২০২২</span>
+                    <span class="gallery-year">২০২২</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2022">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Committe_Sova_2021.jpg" alt="পরিচালনা কমিটি সভা">
+                    <img src="Gallery/2019_22/New_Books_2022.jpg" alt="নতুন বই নিবন্ধন, ২০২২">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পরিচালনা কমিটি সভা</span>
-                    <span class="gallery-year">२०२१</span>
+                    <span class="gallery-title">নতুন বই নিবন্ধন, ২০২২</span>
+                    <span class="gallery-year">২০২২</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2021">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Ekushey_Book_Fair_2021.jpg" alt="একুশে বই মেলা">
+                    <img src="Gallery/2019_22/Committe_Sova_2021.jpg" alt="পরিচালনা কমিটি সভা, ২০২১">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">একুশে বই মেলা</span>
-                    <span class="gallery-year">२०२१</span>
+                    <span class="gallery-title">পরিচালনা কমিটি সভা, ২০২১</span>
+                    <span class="gallery-year">২০২১</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2021">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Pathok_2021.jpg" alt="পাঠক সভা">
+                    <img src="Gallery/2019_22/Ekushey_Book_Fair_2021.jpg" alt="">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পাঠক সভা</span>
-                    <span class="gallery-year">२०२१</span>
+                    <span class="gallery-title"></span>
+                    <span class="gallery-year">২০২১</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2021">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Quiz_Competition_2021.png" alt="কুইজ প্রতিযোগিতা">
+                    <img src="Gallery/2019_22/Pathok_2021.jpg" alt="">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">চতুর্থ কুইজ প্রতিযোগিতা</span>
-                    <span class="gallery-year">२०२१</span>
+                    <span class="gallery-title"></span>
+                    <span class="gallery-year">২০২১</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2021">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Bijoy_Dibosh_2019.jpg" alt="বিজয় দিবস উদযাপন">
+                    <img src="Gallery/2019_22/Quiz_Competition_2021.png" alt="চতুর্থ কুইজ প্রতিযোগিতা (অনলাইন),২০২১">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বিজয় দিবস উদযাপন</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">চতুর্থ কুইজ প্রতিযোগিতা (অনলাইন),২০২১</span>
+                    <span class="gallery-year">২০২১</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2020">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Birthday_2019.jpg" alt="৯ম প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2019_22/New_Books_2020.jpg" alt="নতুন বই নিবন্ধন, ২০২০">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">৯ম প্রতিষ্ঠাবার্ষিকী</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">নতুন বই নিবন্ধন, ২০২০</span>
+                    <span class="gallery-year">২০২০</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Book_Fair_2019.jpg" alt="বই মেলা উদ্বোধন">
+                    <img src="Gallery/2019_22/Bijoy_Dibosh_2019.jpg" alt="বিজয় দিবস উদযাপন, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বই মেলা উদ্বোধন</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">বিজয় দিবস উদযাপন, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Boi_Melay_Pathok_2019.jpg" alt="খিলক্ষেত পাঠাগার বই মেলা">
+                    <img src="Gallery/2019_22/Birthday_2019.jpg" alt="৯ম প্রতিষ্ঠাবার্ষিকী, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পাঠাগার বই মেলা</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">৯ম প্রতিষ্ঠাবার্ষিকী, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Boi_Melay_Khude_Pathok_2019.jpg" alt="পাঠকেরা">
+                    <img src="Gallery/2019_22/Book_Fair_2019.jpg" alt="পাঠাগারের বই মেলা উদ্বোধন, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পাঠাগার আয়োজিত বই মেলায় পাঠকেরা</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">পাঠাগারের বই মেলা উদ্বোধন, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/Iftar_Mahfil_2019.jpg" alt="ইফতার মাহফিল">
+                    <img src="Gallery/2019_22/Boi_Melay_Pathok_2019.jpg" alt="খিলক্ষেত পাঠাগার বই মেলা, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পাঠাগার ইফতার মাহফিল</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">খিলক্ষেত পাঠাগার বই মেলা, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/BBQ_2019.jpg" alt="বার বি কিউ">
+                    <img src="Gallery/2019_22/Boi_Melay_Khude_Pathok_2019.jpg" alt="পাঠাগার আয়োজিত বই মেলায় পাঠকেরা, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বার বি কিউ আয়োজন</span>
-                    <span class="gallery-year">२०१९</span>
+                    <span class="gallery-title">পাঠাগার আয়োজিত বই মেলায় পাঠকেরা, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/New_Books_2022.jpg" alt="নতুন বই নিবন্ধন">
+                    <img src="Gallery/2019_22/Iftar_Mahfil_2019.jpg" alt="পাঠাগার ইফতার মাহফিল, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">নতুন বই নিবন্ধন</span>
-                    <span class="gallery-year">२०२२</span>
+                    <span class="gallery-title">পাঠাগার ইফতার মাহফিল, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2019">
                 <div class="gallery-image">
-                    <img src="Gallery/2019_22/New_Books_2020.jpg" alt="নতুন বই">
+                    <img src="Gallery/2019_22/BBQ_2019.jpg" alt="বার বি কিউ আয়োজন, ২০১৯">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">নতুন বই নিবন্ধন</span>
-                    <span class="gallery-year">२०२०</span>
+                    <span class="gallery-title">বার বি কিউ আয়োজন, ২০১৯</span>
+                    <span class="gallery-year">২০১৯</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Birthday_2018.jpg" alt="৮ম প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2017_18/Birthday_2018.jpg" alt="৮ম প্রতিষ্ঠাবার্ষিকী, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">৮ম প্রতিষ্ঠাবার্ষিকী</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">৮ম প্রতিষ্ঠাবার্ষিকী, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Iftar_Mahfil_2018.jpg" alt="ইফতার মাহফিল">
+                    <img src="Gallery/2017_18/Iftar_Mahfil_2018.jpg" alt="ইফতার মাহফিল, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">ইফতার মাহফিল</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">ইফতার মাহফিল, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Ekushey_February_2018.jpg" alt="একুশে ফেব্রুয়ারী">
+                    <img src="Gallery/2017_18/Ekushey_February_2018.jpg" alt="একুশে ফেব্রুয়ারী উদযাপন, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">একুশে ফেব্রুয়ারী উদযাপন</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">একুশে ফেব্রুয়ারী উদযাপন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/BBQ_2018.jpg" alt="বার বি কিউ">
+                    <img src="Gallery/2017_18/BBQ_2018.jpg" alt="বার বি কিউ আয়োজন, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বার বি কিউ আয়োজন</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">বার বি কিউ আয়োজন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Sadhinota_Dibos_2018.jpg" alt="স্বাধীনতা দিবস">
+                    <img src="Gallery/2017_18/Sadhinota_Dibos_2018.jpg" alt="স্বাধীনতা দিবস উদযাপন, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">স্বাধীনতা দিবস উদযাপন</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">স্বাধীনতা দিবস উদযাপন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Pohela_Baishakh_2018.jpg" alt="পহেলা বৈশাখ">
+                    <img src="Gallery/2017_18/Pohela_Baishakh_2018.jpg" alt="পহেলা বৈশাখ উদযাপন, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পহেলা বৈশাখ উদযাপন</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">পহেলা বৈশাখ উদযাপন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Porichalona_Sodossra_2018.jpg" alt="পরিচালনা কমিটি">
+                    <img src="Gallery/2017_18/Porichalona_Sodossra_2018.jpg" alt="পরিচালনা কমিটি সভা, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পরিচালনা কমিটি সভা</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">পরিচালনা কমিটি সভা, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/3rd_Quiz_Biyoyi_Pathika_2018.jpg" alt="তৃতীয় কুইজ">
+                    <img src="Gallery/2017_18/3rd_Quiz_Biyoyi_Pathika_2018.jpg" alt="তৃতীয় কুইজ প্রতিযোগিতা, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">তৃতীয় কুইজ প্রতিযোগিতা</span>
-                    <span class="gallery-year">२०१८</span>
+                    <span class="gallery-title">তৃতীয় কুইজ প্রতিযোগিতা, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2018">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Notun_Pathok_2017.jpg" alt="নতুন পাঠক">
+                    <img src="Gallery/2017_18/Ekushey_Book_Fair_2018.jpg" alt="একুশে বই মেলা, ২০১৮">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">নতুন পাঠক নিবন্ধন</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">একুশে বই মেলা, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Birthday_2017.jpg" alt="৭ম প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2017_18/Notun_Pathok_2017.jpg" alt="পাঠাগারে নতুন পাঠক নিবন্ধন, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">৭ম প্রতিষ্ঠাবার্ষিকী</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">পাঠাগারে নতুন পাঠক নিবন্ধন, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Bijoy_Dibosh_2017.jpg" alt="বিজয় দিবস">
+                    <img src="Gallery/2017_18/Birthday_2017.jpg" alt="৭ম প্রতিষ্ঠাবার্ষিকী, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বিজয় দিবস উদযাপন</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">৭ম প্রতিষ্ঠাবার্ষিকী, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Book_Review_2017.jpg" alt="বুক রিভিউ">
+                    <img src="Gallery/2017_18/Bijoy_Dibosh_2017.jpg" alt="বিজয় দিবস উদযাপন, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বুক রিভিউ প্রতিযোগিতা</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">বিজয় দিবস উদযাপন, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Banglar_Prokashon_Boi_Mela_2017.jpg" alt="বই মেলা">
+                    <img src="Gallery/2017_18/Bijoy_Dibosh_Uposthit_Dorshok_2017.jpg" alt="বিজয় দিবস অনুষ্ঠানে উপস্থিত দর্শকসমূহ, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">বাংলার প্রকাশন আয়োজিত বই মেলা</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">বিজয় দিবস অনুষ্ঠানে উপস্থিত দর্শকসমূহ, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2017_18/Iftar_Mahfil_2017.jpg" alt="ইফতার মাহফিল">
+                    <img src="Gallery/2017_18/Bijoy_Dibosh_Uposthit_Dorshok_Dorsok_2017.jpg" alt="বিজয় দিবস অনুষ্ঠানে আলোচনা সভা, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">ইফতার মাহফিল</span>
-                    <span class="gallery-year">२०१७</span>
+                    <span class="gallery-title">বিজয় দিবস অনুষ্ঠানে আলোচনা সভা, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2012_16/Ekushey_Book_Fair_2014.jpg" alt="একুশে বই মেলা">
+                    <img src="Gallery/2017_18/Book_Review_2017.jpg" alt="বুক রিভিউ প্রতিযোগিতা, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">একুশে বই মেলা ও সংগ্রহ উৎসব</span>
-                    <span class="gallery-year">२०१४</span>
+                    <span class="gallery-title">বুক রিভিউ প্রতিযোগিতা, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2012_16/Birthday_2014.jpg" alt="প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2017_18/Book_Review_Prize_2017.jpg" alt="বুক রিভিউ পুরষ্কার বিতরণী, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">পরিচালনা কমিটি ও পাঠক সমাবেশ</span>
-                    <span class="gallery-year">२०१४</span>
+                    <span class="gallery-title">বুক রিভিউ পুরষ্কার বিতরণী, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2012_16/Mojar_School_2014.jpg" alt="মজার স্কুল">
+                    <img src="Gallery/2017_18/Banglar_Prokashon_Boi_Mela_2017.jpg" alt="বাংলার প্রকাশন আয়োজিত পাঠাগারে বই মেলা, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">মজার স্কুলের জন্য পাঠাগার</span>
-                    <span class="gallery-year">२०१४</span>
+                    <span class="gallery-title">বাংলার প্রকাশন আয়োজিত পাঠাগারে বই মেলা, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2010_11/Birthday_2011.jpg" alt="১ম প্রতিষ্ঠাবার্ষিকী">
+                    <img src="Gallery/2017_18/Iftar_Mahfil_2017.jpg" alt="ইফতার মাহফিল, ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">১ম প্রতিষ্ঠাবার্ষিকী উদযাপন</span>
-                    <span class="gallery-year">२०११</span>
+                    <span class="gallery-title">ইফতার মাহফিল, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2010_11/Birthday_2010.jpg" alt="প্রতিষ্ঠা">
+                    <img src="Gallery/2017_18/Committe_Sova_July_2017.jpg" alt="পরিচালনা কমিটি সভা, জুলাই ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">খিলক্ষেত পাঠাগার প্রতিষ্ঠার অনুষ্ঠান</span>
-                    <span class="gallery-year">२०१०</span>
+                    <span class="gallery-title">পরিচালনা কমিটি সভা, জুলাই ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
                 </div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-year="2017">
                 <div class="gallery-image">
-                    <img src="Gallery/2010_11/Iftar_Mahfil_2010.jpg" alt="ইফতার মাহফিল">
+                    <img src="Gallery/2017_18/Committe_Sova_August_2017.jpg" alt="পরিচালনা কমিটি সভা, আগস্ট ২০১৭">
                 </div>
                 <div class="gallery-info">
-                    <span class="gallery-title">ইফতার মাহফিল</span>
-                    <span class="gallery-year">२०१०</span>
+                    <span class="gallery-title">পরিচালনা কমিটি সভা, আগস্ট ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Protistabarsiki_Puroskar_Bitoron_2017.jpg" alt="৭ম প্রতিষ্ঠাবার্ষিকীর পুরষ্কার বিতরণী অনুষ্ঠান, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">৭ম প্রতিষ্ঠাবার্ষিকীর পুরষ্কার বিতরণী অনুষ্ঠান, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Birthday_Otithi_2017.jpg" alt="৭ম প্রতিষ্ঠাবার্ষিকীতে অতিথিবৃন্দ, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">৭ম প্রতিষ্ঠাবার্ষিকীতে অতিথিবৃন্দ, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Birthday_Porichalona_Porisodh_2017.jpg" alt="৭ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">৭ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Boi_Songroho_Utsob_2018.jpg" alt="বই সংগ্রহ উৎসব, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বই সংগ্রহ উৎসব, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Birthday_Porichalona_Porisodh_2018.jpg" alt="৮ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">৮ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Ekushey_Book_Fair_Boi_Songroho_2018.jpg" alt="বই সংগ্রহ উৎসব, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বই সংগ্রহ উৎসব, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Ekushey_Book_Fair_Secchasebira_2018.jpg" alt="একুশে বই মেলায় পাঠাগার টীম, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">একুশে বই মেলায় পাঠাগার টীম, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Pathok_Sova_2017.jpg" alt="পাঠক সভা, জুলাই ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠক সভা, জুলাই ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Pathok_Sova_February_2018.jpg" alt="পাঠক সভা, ফেব্রুয়ারী ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠক সভা, ফেব্রুয়ারী ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Pathok_Ovimot_2018.jpg" alt="পাঠক অভিমত গ্রহন, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠক অভিমত গ্রহন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Pathagar_Computer_2017.jpg" alt="পাঠাগারে নতুন কম্পিউটার উদ্বোধন, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠাগারে নতুন কম্পিউটার উদ্বোধন, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Notun_Self_2018.jpg" alt="নতুন বুক শেলফ উদ্বোধন, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">নতুন বুক শেলফ উদ্বোধন, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Tran_Bitoron_2017.jpg" alt="বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/2nd_Quiz_Pathok_2017.jpg" alt="দ্বিতীয় কুইজ প্রতিযোগিতা, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">দ্বিতীয় কুইজ প্রতিযোগিতা, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2017">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Prokashok_Theke_Boi_Grohon_2017.jpg" alt="বাংলার প্রকাশন থেকে পাঠাগারের জন্য বই গ্রহণ, ২০১৭">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বাংলার প্রকাশন থেকে পাঠাগারের জন্য বই গ্রহণ, ২০১৭</span>
+                    <span class="gallery-year">২০১৭</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Quiz_Biyoyi_2018.jpg" alt="তৃতীয় কুইজ প্রতিযোগিতা বিজয়ী, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">তৃতীয় কুইজ প্রতিযোগিতা বিজয়ী, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-image">
+                    <img src="Gallery/2017_18/Epilion_Boi_Mela_2018.jpg" alt="ইপিলিয়ন মেলায় পাঠাগারের স্টল, ২০১৮">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">ইপিলিয়ন মেলায় পাঠাগারের স্টল, ২০১৮</span>
+                    <span class="gallery-year">২০১৮</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Ekushey_Book_Fair_2012.jpg" alt="একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Ekushey_Book_Fair_2014.jpg" alt="একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2015">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Ekushey_Book_Fair_2015.jpg" alt="">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title"></span>
+                    <span class="gallery-year">২০১৫</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Jafar_Iqbal_Autograph_2012.jpg" alt="লেখক জাফর ইকবালের কাছ থেকে অটোগ্রাফ গ্রহণ, বইমেলা ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">লেখক জাফর ইকবালের কাছ থেকে অটোগ্রাফ গ্রহণ, বইমেলা ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Birthday_2014.jpg" alt="পরিচালনা কমিটি ও পাঠক সমাবেশ, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পরিচালনা কমিটি ও পাঠক সমাবেশ, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Cake_2014.jpg" alt="৪র্থ প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">৪র্থ প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Mojar_School_2014.jpg" alt="মজার স্কুলের জন্য খিলক্ষেত পাঠাগার, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মজার স্কুলের জন্য খিলক্ষেত পাঠাগার, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Mojar_School_Ayojok_2014.jpg" alt="মজার স্কুলের সাথে পাঠাগার টিম, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মজার স্কুলের সাথে পাঠাগার টিম, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Mona_Ghar_Asrome_Pathagar_Team_2012.jpg" alt="মোনঘর আশ্রমে পাঠাগার টিম, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মোনঘর আশ্রমে পাঠাগার টিম, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Mona_Ghar_Asrome_Sohojogita_2012.jpg" alt="মোনঘর আশ্রমের জন্য পাঠাগার থেকে সহয়তা প্রদান, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মোনঘর আশ্রমের জন্য পাঠাগার থেকে সহয়তা প্রদান, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Mona_Ghar_Asrome_Students_2012.jpg" alt="মোনঘর আশ্রমের শিশু কিশোরেরা, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মোনঘর আশ্রমের শিশু কিশোরেরা, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2016">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Pathok_2016.jpg" alt="বই পড়ূয়া পাঠকেরা, ২০১৬">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বই পড়ূয়া পাঠকেরা, ২০১৬</span>
+                    <span class="gallery-year">২০১৬</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2014">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Pathok_Sova_2014.jpg" alt="পাঠক সভা, ২০১৪">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠক সভা, ২০১৪</span>
+                    <span class="gallery-year">২০১৪</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2012_16/Sheet_Brostro_Sova_2012.jpg" alt="ঊত্তরবঙ্গে শীতবস্ত্র বিতরণ, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">ঊত্তরবঙ্গে শীতবস্ত্র বিতরণ, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2010">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Birthday_2010.jpg" alt="খিলক্ষেত পাঠাগার প্রতিষ্ঠার অনুষ্ঠান, ২০১০">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">খিলক্ষেত পাঠাগার প্রতিষ্ঠার অনুষ্ঠান, ২০১০</span>
+                    <span class="gallery-year">২০১০</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/1st_Birthday_Ceremony_2011.jpg" alt="১ম প্রতিষ্ঠাবার্ষিকী উপলক্ষে অনুষ্ঠান, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">১ম প্রতিষ্ঠাবার্ষিকী উপলক্ষে অনুষ্ঠান, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Birthday_2011.jpg" alt="১ম প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">১ম প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Bijoy_Dibosh_2011.jpg" alt="বিজয় দিবস উদযাপন, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বিজয় দিবস উদযাপন, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Bijoy_Dibosh_Postering_2011.jpg" alt="বিজয় দিবস উপলক্ষে দেয়ালে দেয়ালে পোস্টার লাগানোর প্রস্তুতি, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">বিজয় দিবস উপলক্ষে দেয়ালে দেয়ালে পোস্টার লাগানোর প্রস্তুতি, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2010">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Boi_Uttolon_2010.jpg" alt="পাঠাগারের বই উত্তলন এবং বই নিবন্ধনকরণ">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">পাঠাগারের বই উত্তলন এবং বই নিবন্ধনকরণ</span>
+                    <span class="gallery-year">২০১০</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Champion_Campus_Hero_2011.jpg" alt="চ্যাম্পিয়ন, চ্যানেল আই ক্যাম্পাস হিরো, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">চ্যাম্পিয়ন, চ্যানেল আই ক্যাম্পাস হিরো, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Champion_Campus_Hero_Interview_2011.jpg" alt="চ্যাম্পিয়ন আফসিদ ইয়ামিন ভাইয়ের বিজয়ী হওয়ার পর অনুভুতিগ্রহণ, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">চ্যাম্পিয়ন আফসিদ ইয়ামিন ভাইয়ের বিজয়ী হওয়ার পর অনুভুতিগ্রহণ, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Campus_Hero_Champion_Pathagar_Team_2011.jpg" alt="চ্যানেল আই ক্যাম্পাস হিরো চ্যাম্পিয়ন খিলক্ষেত পাঠাগার টীম, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">চ্যানেল আই ক্যাম্পাস হিরো চ্যাম্পিয়ন খিলক্ষেত পাঠাগার টীম, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2010">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Iftar_Mahfil_2010.jpg" alt="ইফতার মাহফিল, ২০১০">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">ইফতার মাহফিল, ২০১০</span>
+                    <span class="gallery-year">২০১০</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2010">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Khilkhet_Pathagar_Website_2010.jpg" alt="খিলক্ষেত পাঠাগারের ওয়েবসাইট উদ্বোধন, ২০১০">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">খিলক্ষেত পাঠাগারের ওয়েবসাইট উদ্বোধন, ২০১০</span>
+                    <span class="gallery-year">২০১০</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2011">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Life_Time_Achivement_2011.jpg" alt="খিলক্ষেত পাঠাগারের আজীবন সম্মাননা প্রদান, ২০১১">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">খিলক্ষেত পাঠাগারের আজীবন সম্মাননা প্রদান, ২০১১</span>
+                    <span class="gallery-year">২০১১</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-year="2012">
+                <div class="gallery-image">
+                    <img src="Gallery/2010_11/Mona_Ghar_Asrome_2012.jpg" alt="মোনঘর আশ্রমের সংঠকদের সাথে খিলক্ষেত পাঠাগার টীম, ২০১২">
+                </div>
+                <div class="gallery-info">
+                    <span class="gallery-title">মোনঘর আশ্রমের সংঠকদের সাথে খিলক্ষেত পাঠাগার টীম, ২০১২</span>
+                    <span class="gallery-year">২০১২</span>
                 </div>
             </div>
         </div>
@@ -1602,5 +2027,129 @@
             <div class="footer-text">© ২০১০–২০২৬ খিলক্ষেত পাঠাগার · খিলক্ষেত বটতলা, ঢাকা</div>
         </div>
     </footer>
+
+    <script>
+        // Gallery Data with proper titles and years
+        const galleryData = [
+            { src: 'Gallery/2019_22/Birthday_2022.jpg', title: '১২ তম প্রতিষ্ঠাবার্ষিকী, ২০২২', year: '2022' },
+            { src: 'Gallery/2019_22/Iftar_Mahfil_2022.jpg', title: 'খিলক্ষেত পাঠাগার ইফতার মাহফিল, ২০২২', year: '2022' },
+            { src: 'Gallery/2019_22/Boi_Songroho_Utsob_2022.jpg', title: 'বই সংগ্রহ উৎসব, ২০২২', year: '2022' },
+            { src: 'Gallery/2019_22/GronthoGar_Dibosh_2022.jpg', title: 'জাতীয় গ্রন্থাগার দিবস উদযাপনে আলোচনা সভা (অনলাইন), ২০২২', year: '2022' },
+            { src: 'Gallery/2019_22/New_Books_2022.jpg', title: 'নতুন বই নিবন্ধন, ২০২২', year: '2022' },
+            { src: 'Gallery/2019_22/Committe_Sova_2021.jpg', title: 'পরিচালনা কমিটি সভা, ২০২১', year: '2021' },
+            { src: 'Gallery/2019_22/Ekushey_Book_Fair_2021.jpg', title: '', year: '2021' },
+            { src: 'Gallery/2019_22/Pathok_2021.jpg', title: '', year: '2021' },
+            { src: 'Gallery/2019_22/Quiz_Competition_2021.png', title: 'চতুর্থ কুইজ প্রতিযোগিতা (অনলাইন),২০২১', year: '2021' },
+            { src: 'Gallery/2019_22/New_Books_2020.jpg', title: 'নতুন বই নিবন্ধন, ২০২০', year: '2020' },
+            { src: 'Gallery/2019_22/Bijoy_Dibosh_2019.jpg', title: 'বিজয় দিবস উদযাপন, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/Birthday_2019.jpg', title: '৯ম প্রতিষ্ঠাবার্ষিকী, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/Book_Fair_2019.jpg', title: 'পাঠাগারের বই মেলা উদ্বোধন, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/Boi_Melay_Pathok_2019.jpg', title: 'খিলক্ষেত পাঠাগার বই মেলা, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/Boi_Melay_Khude_Pathok_2019.jpg', title: 'পাঠাগার আয়োজিত বই মেলায় পাঠকেরা, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/Iftar_Mahfil_2019.jpg', title: 'পাঠাগার ইফতার মাহফিল, ২০১৯', year: '2019' },
+            { src: 'Gallery/2019_22/BBQ_2019.jpg', title: 'বার বি কিউ আয়োজন, ২০১৯', year: '2019' },
+            { src: 'Gallery/2017_18/Birthday_2018.jpg', title: '৮ম প্রতিষ্ঠাবার্ষিকী, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Iftar_Mahfil_2018.jpg', title: 'ইফতার মাহফিল, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Ekushey_February_2018.jpg', title: 'একুশে ফেব্রুয়ারী উদযাপন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/BBQ_2018.jpg', title: 'বার বি কিউ আয়োজন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Sadhinota_Dibos_2018.jpg', title: 'স্বাধীনতা দিবস উদযাপন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Pohela_Baishakh_2018.jpg', title: 'পহেলা বৈশাখ উদযাপন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Porichalona_Sodossra_2018.jpg', title: 'পরিচালনা কমিটি সভা, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/3rd_Quiz_Biyoyi_Pathika_2018.jpg', title: 'তৃতীয় কুইজ প্রতিযোগিতা, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Ekushey_Book_Fair_2018.jpg', title: 'একুশে বই মেলা, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Notun_Pathok_2017.jpg', title: 'পাঠাগারে নতুন পাঠক নিবন্ধন, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Birthday_2017.jpg', title: '৭ম প্রতিষ্ঠাবার্ষিকী, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Bijoy_Dibosh_2017.jpg', title: 'বিজয় দিবস উদযাপন, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Bijoy_Dibosh_Uposthit_Dorshok_2017.jpg', title: 'বিজয় দিবস অনুষ্ঠানে উপস্থিত দর্শকসমূহ, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Bijoy_Dibosh_Uposthit_Dorshok_Dorsok_2017.jpg', title: 'বিজয় দিবস অনুষ্ঠানে আলোচনা সভা, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Book_Review_2017.jpg', title: 'বুক রিভিউ প্রতিযোগিতা, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Book_Review_Prize_2017.jpg', title: 'বুক রিভিউ পুরষ্কার বিতরণী, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Banglar_Prokashon_Boi_Mela_2017.jpg', title: 'বাংলার প্রকাশন আয়োজিত পাঠাগারে বই মেলা, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Iftar_Mahfil_2017.jpg', title: 'ইফতার মাহফিল, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Committe_Sova_July_2017.jpg', title: 'পরিচালনা কমিটি সভা, জুলাই ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Committe_Sova_August_2017.jpg', title: 'পরিচালনা কমিটি সভা, আগস্ট ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Protistabarsiki_Puroskar_Bitoron_2017.jpg', title: '৭ম প্রতিষ্ঠাবার্ষিকীর পুরষ্কার বিতরণী অনুষ্ঠান, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Birthday_Otithi_2017.jpg', title: '৭ম প্রতিষ্ঠাবার্ষিকীতে অতিথিবৃন্দ, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Birthday_Porichalona_Porisodh_2017.jpg', title: '৭ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Boi_Songroho_Utsob_2018.jpg', title: 'বই সংগ্রহ উৎসব, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Birthday_Porichalona_Porisodh_2018.jpg', title: '৮ম প্রতিষ্ঠাবার্ষিকীতে পরিচালনা কমিটি, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Ekushey_Book_Fair_Boi_Songroho_2018.jpg', title: 'বই সংগ্রহ উৎসব, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Ekushey_Book_Fair_Secchasebira_2018.jpg', title: 'একুশে বই মেলায় পাঠাগার টীম, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Pathok_Sova_2017.jpg', title: 'পাঠক সভা, জুলাই ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Pathok_Sova_February_2018.jpg', title: 'পাঠক সভা, ফেব্রুয়ারী ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Pathok_Ovimot_2018.jpg', title: 'পাঠক অভিমত গ্রহন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Pathagar_Computer_2017.jpg', title: 'পাঠাগারে নতুন কম্পিউটার উদ্বোধন, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Notun_Self_2018.jpg', title: 'নতুন বুক শেলফ উদ্বোধন, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Tran_Bitoron_2017.jpg', title: 'বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/2nd_Quiz_Pathok_2017.jpg', title: 'দ্বিতীয় কুইজ প্রতিযোগিতা, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Prokashok_Theke_Boi_Grohon_2017.jpg', title: 'বাংলার প্রকাশন থেকে পাঠাগারের জন্য বই গ্রহণ, ২০১৭', year: '2017' },
+            { src: 'Gallery/2017_18/Quiz_Biyoyi_2018.jpg', title: 'তৃতীয় কুইজ প্রতিযোগিতা বিজয়ী, ২০১৮', year: '2018' },
+            { src: 'Gallery/2017_18/Epilion_Boi_Mela_2018.jpg', title: 'ইপিলিয়ন মেলায় পাঠাগারের স্টল, ২০১৮', year: '2018' },
+            { src: 'Gallery/2012_16/Ekushey_Book_Fair_2012.jpg', title: 'একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১২', year: '2012' },
+            { src: 'Gallery/2012_16/Ekushey_Book_Fair_2014.jpg', title: 'একুশে বই মেলা ও বই সংগ্রহ উৎসব, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Ekushey_Book_Fair_2015.jpg', title: '', year: '2015' },
+            { src: 'Gallery/2012_16/Jafar_Iqbal_Autograph_2012.jpg', title: 'লেখক জাফর ইকবালের কাছ থেকে অটোগ্রাফ গ্রহণ, বইমেলা ২০১২', year: '2012' },
+            { src: 'Gallery/2012_16/Birthday_2014.jpg', title: 'পরিচালনা কমিটি ও পাঠক সমাবেশ, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Cake_2014.jpg', title: '৪র্থ প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Mojar_School_2014.jpg', title: 'মজার স্কুলের জন্য খিলক্ষেত পাঠাগার, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Mojar_School_Ayojok_2014.jpg', title: 'মজার স্কুলের সাথে পাঠাগার টিম, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Mona_Ghar_Asrome_Pathagar_Team_2012.jpg', title: 'মোনঘর আশ্রমে পাঠাগার টিম, ২০১২', year: '2012' },
+            { src: 'Gallery/2012_16/Mona_Ghar_Asrome_Sohojogita_2012.jpg', title: 'মোনঘর আশ্রমের জন্য পাঠাগার থেকে সহয়তা প্রদান, ২০১২', year: '2012' },
+            { src: 'Gallery/2012_16/Mona_Ghar_Asrome_Students_2012.jpg', title: 'মোনঘর আশ্রমের শিশু কিশোরেরা, ২০১২', year: '2012' },
+            { src: 'Gallery/2012_16/Pathok_2016.jpg', title: 'বই পড়ূয়া পাঠকেরা, ২০১৬', year: '2016' },
+            { src: 'Gallery/2012_16/Pathok_Sova_2014.jpg', title: 'পাঠক সভা, ২০১৪', year: '2014' },
+            { src: 'Gallery/2012_16/Sheet_Brostro_Sova_2012.jpg', title: 'ঊত্তরবঙ্গে শীতবস্ত্র বিতরণ, ২০১২', year: '2012' },
+            { src: 'Gallery/2010_11/Birthday_2010.jpg', title: 'খিলক্ষেত পাঠাগার প্রতিষ্ঠার অনুষ্ঠান, ২০১০', year: '2010' },
+            { src: 'Gallery/2010_11/1st_Birthday_Ceremony_2011.jpg', title: '১ম প্রতিষ্ঠাবার্ষিকী উপলক্ষে অনুষ্ঠান, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Birthday_2011.jpg', title: '১ম প্রতিষ্ঠাবার্ষিকী উদযাপন, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Bijoy_Dibosh_2011.jpg', title: 'বিজয় দিবস উদযাপন, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Bijoy_Dibosh_Postering_2011.jpg', title: 'বিজয় দিবস উপলক্ষে দেয়ালে দেয়ালে পোস্টার লাগানোর প্রস্তুতি, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Boi_Uttolon_2010.jpg', title: 'পাঠাগারের বই উত্তলন এবং বই নিবন্ধনকরণ', year: '2010' },
+            { src: 'Gallery/2010_11/Champion_Campus_Hero_2011.jpg', title: 'চ্যাম্পিয়ন, চ্যানেল আই ক্যাম্পাস হিরো, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Champion_Campus_Hero_Interview_2011.jpg', title: 'চ্যাম্পিয়ন আফসিদ ইয়ামিন ভাইয়ের বিজয়ী হওয়ার পর অনুভুতিগ্রহণ, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Campus_Hero_Champion_Pathagar_Team_2011.jpg', title: 'চ্যানেল আই ক্যাম্পাস হিরো চ্যাম্পিয়ন খিলক্ষেত পাঠাগার টীম, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Iftar_Mahfil_2010.jpg', title: 'ইফতার মাহফিল, ২০১০', year: '2010' },
+            { src: 'Gallery/2010_11/Khilkhet_Pathagar_Website_2010.jpg', title: 'খিলক্ষেত পাঠাগারের ওয়েবসাইট উদ্বোধন, ২০১০', year: '2010' },
+            { src: 'Gallery/2010_11/Life_Time_Achivement_2011.jpg', title: 'খিলক্ষেত পাঠাগারের আজীবন সম্মাননা প্রদান, ২০১১', year: '2011' },
+            { src: 'Gallery/2010_11/Mona_Ghar_Asrome_2012.jpg', title: 'মোনঘর আশ্রমের সংঠকদের সাথে খিলক্ষেত পাঠাগার টীম, ২০১২', year: '2012' }
+        ];
+
+        // Render gallery
+        const toBanglaDigits = s => s.replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+        function renderGallery(filterYear = 'সব') {
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
+
+            galleryData.forEach(item => {
+                if (filterYear === 'সব' || item.year === filterYear) {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.dataset.year = item.year;
+                    galleryItem.innerHTML = `
+                        <div class="gallery-image">
+                            <img src="${item.src}" alt="${item.title}">
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-title">${item.title}</span>
+                            <span class="gallery-year">${toBanglaDigits(item.year)}</span>
+                        </div>
+                    `;
+                    galleryGrid.appendChild(galleryItem);
+                }
+            });
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.year-filter').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.year-filter').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderGallery(this.dataset.year);
+            });
+        });
+
+        // Initial render
+        renderGallery();
+    </script>
 </body>
 </html>
