@@ -1090,7 +1090,25 @@
             <div class="section-label">স্মৃতির অ্যালবাম</div>
             <h2>গ্যালারী</h2>
         </div>
-        <div class="gallery-grid">
+
+        <!-- Year Filter -->
+        <div style="margin-bottom: 36px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+            <span style="font-weight: 600; color: #063D22;">বছর অনুযায়ী ফিল্টার:</span>
+            <button class="year-filter active" data-year="সব">সব</button>
+            <button class="year-filter" data-year="2022">২০२२</button>
+            <button class="year-filter" data-year="2021">२०२१</button>
+            <button class="year-filter" data-year="2020">२०२०</button>
+            <button class="year-filter" data-year="2019">२०१९</button>
+            <button class="year-filter" data-year="2018">२०१८</button>
+            <button class="year-filter" data-year="2017">२०१७</button>
+            <button class="year-filter" data-year="2016">२०१६</button>
+            <button class="year-filter" data-year="2014">२०१४</button>
+            <button class="year-filter" data-year="2012">२०१२</button>
+            <button class="year-filter" data-year="2011">२०११</button>
+            <button class="year-filter" data-year="2010">२०१०</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
             <div class="gallery-item">
                 <div class="gallery-image">
                     <img src="Gallery/2019_22/Birthday_2022.jpg" alt="১২ তম প্রতিষ্ঠাবার্ষিকী">
@@ -1558,7 +1576,7 @@
         <div class="contact-grid">
             <div class="contact-card">
                 <div class="contact-label">মোবাইল</div>
-                <div class="contact-value">01616-944853, 01939-649428</div>
+                <div class="contact-value">01616-944853</div>
             </div>
             <div class="contact-card">
                 <div class="contact-label">ইমেইল</div>
